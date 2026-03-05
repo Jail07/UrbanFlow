@@ -1,0 +1,99 @@
+/* ===== Dashboard layout ===== */
+.control-center {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.panel {
+  background: rgba(0,0,0,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  width: 200px;
+  text-align: center;
+  position: relative; 
+  overflow: hidden;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.panel h3 {
+  margin-bottom: 10px;
+}
+
+.panel span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Traffic Indicator */
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.indicator.green { background: #00E5A8; }
+.indicator.orange { background: #FF6B3D; }
+.indicator.red { background: #FF3D3D; }
+
+/* Cars Animation */
+.car {
+  width: 30px;
+  height: 15px;
+  background: #FF6B3D;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  animation: moveCar 3s linear infinite alternate;
+}
+
+@keyframes moveCar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(200px); }
+}
+
+/* Quick access section */
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.section-card {
+  display: inline-block;
+  padding: 15px 25px;
+  background: #00C2FF;
+  color: black;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.section-card:hover {
+  transform: scale(1.05);
+  background: #00E5A8;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg,#0B0F1A,#1C1F2A);
+  color: #00C2FF;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 1000px;
+}

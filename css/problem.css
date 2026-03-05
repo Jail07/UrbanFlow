@@ -1,0 +1,7 @@
+body{background:#0B0F1A;color:#FF6B3D;font-family:'Segoe UI',sans-serif;margin:0;padding:0;}
+header{text-align:center;padding:30px 20px;}
+.back-button{display:inline-block;margin-top:10px;padding:10px 20px;background:#FF6B3D;color:white;border-radius:12px;text-decoration:none;transition:transform 0.3s;}
+.back-button:hover{transform:scale(1.05);}
+main{max-width:1000px;margin:20px auto;padding:20px;background:rgba(255,255,255,0.05);border-radius:15px;}
+.content h2{color:#FF6B3D;margin-bottom:15px;}
+.content p{color:#ffffff;line-height:1.6;}

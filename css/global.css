@@ -1,0 +1,49 @@
+:root{
+--bg:#0B0F1A;
+--panel:#111827;
+--blue:#00C2FF;
+--green:#00E5A8;
+--orange:#FF6B3D;
+}
+
+body{
+margin:0;
+font-family:Inter,Segoe UI;
+background:var(--bg);
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:#060913;
+border-bottom:1px solid rgba(0,194,255,0.4);
+backdrop-filter:blur(8px);
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:var(--green);
+text-shadow:0 0 10px var(--green);
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:var(--blue);
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:white;
+}
+
+.page{
+max-width:1200px;
+margin:auto;
+padding:80px;
+}

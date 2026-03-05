@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UrbanFlow Dashboard</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header>
+  <div class="logo">UrbanFlow</div>
+  <nav>
+    <a href="pages/overview.html">Overview</a>
+    <a href="pages/problem.html">Problem</a>
+    <a href="pages/goals.html">Goals</a>
+    <a href="pages/tasks.html">Tasks</a>
+    <a href="pages/research.html">Research</a>
+    <a href="pages/architecture.html">Architecture</a>
+    <a href="pages/data.html">Data</a>
+    <a href="pages/metrics.html">Metrics</a>
+    <a href="pages/limitations.html">Limitations</a>
+    <a href="pages/future.html">Future</a>
+    <a href="pages/significance.html">Significance</a>
+    <a href="pages/results.html">Results</a>
+  </nav>
+</header>
+
+<!-- ===== Hero Section ===== -->
+<section class="hero">
+  <h1>Adaptive Traffic Signal Control</h1>
+  <p>UrbanFlow — Smart Traffic Research Platform</p>
+</section>
+
+<!-- ===== Dashboard Section ===== -->
+<section class="control-center">
+
+  <!-- Traffic Status -->
+  <div class="panel">
+    <h3>Traffic Status</h3>
+    <div class="indicator green"></div>
+    <p>Normal Flow</p>
+  </div>
+
+  <!-- Active Intersections -->
+  <div class="panel">
+    <h3>Active Intersections</h3>
+    <span>24</span>
+  </div>
+
+  <!-- Vehicles / minute -->
+  <div class="panel">
+    <h3>Vehicles / minute</h3>
+    <span id="vehicles">0</span>
+  </div>
+
+  <!-- Average Delay -->
+  <div class="panel">
+    <h3>Average Delay</h3>
+    <span id="avgDelay">0</span>
+  </div>
+
+  <!-- Traffic Simulation -->
+  <div class="panel" style="height:80px; position:relative; overflow:hidden;">
+    <h3>Traffic Simulation</h3>
+    <div class="car" style="top:10px; animation-delay:0s;"></div>
+    <div class="car" style="top:30px; animation-delay:1s;"></div>
+    <div class="car" style="top:50px; animation-delay:2s;"></div>
+  </div>
+
+</section>
+
+<!-- ===== Quick Access Section ===== -->
+<section class="sections">
+  <a href="pages/overview.html" class="section-card">Overview</a>
+  <a href="pages/problem.html" class="section-card">Problem</a>
+  <a href="pages/goals.html" class="section-card">Goals</a>
+  <a href="pages/tasks.html" class="section-card">Tasks</a>
+  <a href="pages/research.html" class="section-card">Research</a>
+  <a href="pages/architecture.html" class="section-card">Architecture</a>
+  <a href="pages/data.html" class="section-card">Data</a>
+  <a href="pages/metrics.html" class="section-card">Metrics</a>
+  <a href="pages/limitations.html" class="section-card">Limitations</a>
+  <a href="pages/future.html" class="section-card">Future</a>
+  <a href="pages/significance.html" class="section-card">Significance</a>
+  <a href="pages/results.html" class="section-card">Results</a>
+</section>
+
+</body>
+</html>
