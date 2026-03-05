@@ -1,4 +1,61 @@
 /* ===== Dashboard layout ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0B0F1A;
+  color: #00C2FF;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #1C1F2A;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00E5A8;
+}
+
+header nav a {
+  color: #00C2FF;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #00E5A8;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg,#0B0F1A,#1C1F2A);
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 1000px;
+  color: #00C2FF;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  animation: fadeIn 2s 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Panels */
 .control-center {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +65,7 @@
 }
 
 .panel {
-  background: rgba(0,0,0,0.05);
+  background: rgba(0,0,0,0.2);
   padding: 20px;
   border-radius: 15px;
   width: 200px;
@@ -42,9 +99,15 @@
   margin-bottom: 5px;
 }
 
-.indicator.green { background: #00E5A8; }
-.indicator.orange { background: #FF6B3D; }
-.indicator.red { background: #FF3D3D; }
+.indicator.green { background: #00E5A8; animation: pulse 1.5s infinite; }
+.indicator.orange { background: #FF6B3D; animation: pulse 1.5s infinite; }
+.indicator.red { background: #FF3D3D; animation: pulse 1.5s infinite; }
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
 
 /* Cars Animation */
 .car {
@@ -53,13 +116,16 @@
   background: #FF6B3D;
   border-radius: 4px;
   position: absolute;
-  left: 0;
-  animation: moveCar 3s linear infinite alternate;
+  left: -40px;
+  animation: moveCar 4s linear infinite;
 }
+
+.car:nth-child(2) { animation-delay: 1s; }
+.car:nth-child(3) { animation-delay: 2s; }
 
 @keyframes moveCar {
   0% { transform: translateX(0); }
-  100% { transform: translateX(200px); }
+  100% { transform: translateX(240px); }
 }
 
 /* Quick access section */
@@ -78,6 +144,7 @@
   color: black;
   border-radius: 12px;
   text-decoration: none;
+  font-weight: bold;
   transition: transform 0.3s, background 0.3s;
 }
 
@@ -87,13 +154,8 @@
   color: white;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg,#0B0F1A,#1C1F2A);
-  color: #00C2FF;
-  border-radius: 15px;
-  margin: 20px auto;
-  max-width: 1000px;
+/* FadeIn Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
 }
