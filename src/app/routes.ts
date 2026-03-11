@@ -4,7 +4,7 @@ import { DocumentationPage } from "./pages/documentation-page";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/UrbanFlow/",
     Component: LandingPage,
   },
   {
